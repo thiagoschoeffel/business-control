@@ -1,0 +1,307 @@
+/* Global Personalization */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+textarea {
+    resize: none;
+}
+
+/* Bootstrap Personalization */
+.alert {
+    font-size: 0.875rem;
+}
+.font-weight-bold {
+    font-weight: 800 !important;
+}
+.form-control:focus,
+.custom-select:focus {
+    border-color: #394047;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+    border-color: #394047 !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.custom-control-input:active ~ .custom-control-label::before {
+    background-color: #fff !important;
+    border-color: #394047 !important;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #212529;
+    border-color: #212529;
+}
+.page-link,
+.page-link:hover {
+    color: #212529;
+}
+.page-link:focus {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.page-item.active .page-link {
+    background-color: #212529;
+    border: 1px solid #212529;
+    font-weight: 700;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #212529;
+}
+
+/* App Loader */
+.app_loader {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .75);
+}
+.app_loader_content {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+}
+
+/* App Notifications */
+.app_notifications {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9998;
+    width: 300px;
+    overflow: hidden;
+}
+
+/* App Login */
+.app_login_presentation {
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+/* App Structure */
+.app_wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.app_sidebar {
+    position: fixed;
+    top: 50px;
+    left: -375px;
+    z-index: 1;
+    width: 375px;
+    height: calc(100% - 50px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    border-right: 1px solid rgba(0, 0, 0, .125);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.app_sidebar.app_sidebar_open {
+    left: 0;
+}
+.app_sidebar_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.app_sidebar_content > ul {
+    position: absolute;
+    top: 127px;
+    left: 0;
+    bottom: 88px;
+    width: 100%;
+    height: calc(100% - 215px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-top: 1px solid rgba(0, 0, 0, .125);
+}
+.app_sidebar_content > ul > li {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+.app_sidebar_content > ul > li > a {
+    display: block;
+    padding: 10px;
+    padding-left: 20px;
+    color: #212529;
+    border-left: 4px solid transparent;
+}
+.app_sidebar_content ul li a:hover {
+    text-decoration: none;
+}
+.app_sidebar_content ul li a.active {
+    font-weight: 700;
+    border-left: 4px solid #ff6464;
+}
+.app_sidebar_content > ul > li > ul::before {
+    position: absolute;
+    top: 20px;
+    left: 33.5px;
+    bottom: 0;
+    width: 30px;
+    border-left: 1px dashed #212529;
+    content: "";
+}
+
+.app_sidebar_content > ul > li > ul > li {
+    position: relative;
+}
+.app_sidebar_content > ul > li > ul > li::before {
+    position: absolute;
+    top: 22px;
+    left: 37px;
+    width: 15px;
+    border-top: 1px dashed #212529;
+    content: "";
+}
+.app_sidebar_content > ul > li > ul > li > a {
+    display: block;
+    padding: 10px;
+    padding-left: 48px;
+    color: #212529;
+    border-left: 4px solid transparent;
+}
+
+.app_sidebar_content > ul > li > ul > li > ul > li {
+    position: relative;
+}
+.app_sidebar_content > ul > li > ul > li > ul > li::before {
+    position: absolute;
+    top: 22px;
+    left: 37px;
+    width: 45px;
+    border-top: 1px dashed #212529;
+    content: "";
+}
+.app_sidebar_content > ul > li > ul > li > ul > li a {
+    display: block;
+    padding: 10px;
+    padding-left: 78px;
+    color: #212529;
+    border-left: 4px solid transparent;
+}
+
+.app_sidebar_content_logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+.app_content_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.app_content_nav_logo {
+    width: 130px;
+}
+.app_content {
+    position: fixed;
+    top: 50px;
+    left: 375px;
+    z-index: 1;
+    width: calc(100% - 375px);
+    height: calc(100% - 50px);
+    padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.app_content_full {
+    width: 100%;
+    left: 0;
+}
+
+.table {
+    white-space: nowrap;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.table thead,
+.table tfoot {
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table tr.active {
+    border: 1px solid #212529;
+}
+
+.table tr th,
+.table tr td {
+    vertical-align: middle !important;
+}
+
+.badge {
+    font-size: 0.75rem;
+}
+
+.progress {
+    font-size: 0.75rem;
+}
+
+.main_card_details_title {
+    flex-basis: 57%;
+}
+
+.main_card_details_progress {
+    flex-basis: 37%;
+}
+
+@media(max-width: 575px) {
+    .app_login_presentation {
+        height: 300px;
+    }
+    .main_content_nav_logo {
+        width: 90px;
+    }
+    .main_content {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media(max-width: 767px) {
+    .main_card_details_title {
+        flex-basis: 100%;
+    }
+    .main_card_details_progress {
+        flex-basis: 100%;
+    }
+}
